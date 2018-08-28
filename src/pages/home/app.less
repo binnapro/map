@@ -1,189 +1,247 @@
-.map-bk{
+.map-bk {
   background: #f8f8f8;
+  height: 100%;
+  width: 100%;
+  .max-width {
+    width: 680px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .map-title {
+    margin: 0 auto;
+    height: 33px;
+    width: 91px;
+    line-height: 33px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    background: #75ca86;
+    text-align: center;
+    color: #fff;
+  }
+  .title-type {
+    font-size: 17px;
+    color: #a8a8a8;
+    font-weight: 300;
+    margin-right: 35px;
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: 1px;
+      height: 12px;
+      width: 12px;
+      background: #ffb400;
+      border-radius: 6px;
+      margin-right: 10px;
+    }
+  }
+  .map-bottom-button {
+    height: 8px;
+    border-radius: 4px;
+    width: 48px;
+    background: #ffa77e;
+    margin: 0 18px;
+  }
+  .map-bottom-button-white {
+    .map-bottom-button;
+    background: #f7f1e6;
+  }
+  .map-bottom-button-grey {
+    .map-bottom-button;
+    background: #696b70;
+  }
+  .map-bottom-button-rou {
+    .map-bottom-button;
+    background: #ffefc7;
+  }
+  .map-bottom-button-blue {
+    .map-bottom-button;
+    background: #7cd3d2;
+  }
 }
 
-.default{
-  transition: .3s;
+.default {
+  transition: 0.3s;
   transform: scale(1);
-  z-index:0;
+  z-index: 0;
 }
-.select{
+.select {
   transform: scale(1.01);
   z-index: 99;
 }
-.noselect{
+.noselect {
   transform: scale(1);
-  opacity:0.3;
-  z-index:1;
+  opacity: 0.3;
+  z-index: 1;
 }
-// tabs 
+// tabs
 .myTabs {
-  .ant-tabs-bar{
+  .ant-tabs-bar {
     margin-bottom: 13px;
   }
-  .ant-tabs-nav .ant-tabs-tab-active{
-    color:#75ca86;
+  .ant-tabs-nav .ant-tabs-tab-active {
+    color: #75ca86;
     font-size: 17px;
   }
-  .ant-tabs-nav .ant-tabs-tab:hover{
-    color:#75ca86;
+  .ant-tabs-nav .ant-tabs-tab:hover {
+    color: #75ca86;
   }
-  .ant-tabs-nav .ant-tabs-tab{
+  .ant-tabs-nav .ant-tabs-tab {
     font-size: 17px;
   }
-  .ant-tabs-ink-bar{
+  .ant-tabs-ink-bar {
     background: #75ca86;
     height: 3px;
     border-radius: 1.5px;
   }
 }
 // kuang
-.schoolMapModal{
-  opacity:1;
-  animation:schoolMapModalMove 0.5s;
+.schoolMapModal {
+  opacity: 1;
+  animation: schoolMapModalMove 0.5s;
 }
-@keyframes schoolMapModalMove{
-  from{
+@keyframes schoolMapModalMove {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
 // xian
-.lineRight{
-  .hLine{
+.lineRight {
+  .hLine {
     position: absolute;
-    top:54px;
+    top: 54px;
     left: 45px;
     width: 48px;
     height: 1px;
     background: #ffb400;
-    animation:second1 0.3s;
+    animation: second1 0.3s;
   }
-  @keyframes second1{
-    from{
+  @keyframes second1 {
+    from {
       width: 0px;
     }
-    to{
+    to {
       width: 48px;
     }
   }
-  .xLine{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 80px;
-      height: 1px;
-      background: #ffb400;
-      transform: rotateZ(-55deg);
-      transform-origin:bottom left;
-      animation:first1 0.5s;
+  .xLine {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 1px;
+    background: #ffb400;
+    transform: rotateZ(-55deg);
+    transform-origin: bottom left;
+    animation: first1 0.5s;
   }
-  @keyframes first1{
-    from{
-      transform:rotateZ(-55deg) scale(0);
+  @keyframes first1 {
+    from {
+      transform: rotateZ(-55deg) scale(0);
     }
-    to{
-      transform:rotateZ(-55deg) scale(1);
+    to {
+      transform: rotateZ(-55deg) scale(1);
     }
   }
-  .bottomLeftCircle{
+  .bottomLeftCircle {
     position: absolute;
     bottom: -9px;
     left: -8px;
     opacity: 1;
-    animation:firstCircle1 1s;
+    animation: firstCircle1 1s;
   }
-  @keyframes firstCircle1{
-    from{
+  @keyframes firstCircle1 {
+    from {
       opacity: 0;
     }
-    to{
+    to {
       opacity: 1;
     }
   }
-  .topRightCircle{
+  .topRightCircle {
     position: absolute;
     top: 45px;
     right: 15px;
-    animation:secondCircle1 1s;
+    animation: secondCircle1 1s;
   }
-  @keyframes secondCircle1{
-    from{
+  @keyframes secondCircle1 {
+    from {
       opacity: 0;
     }
-    to{
+    to {
       opacity: 1;
     }
   }
 }
-.lineLeft{
-  .hLine{
+.lineLeft {
+  .hLine {
     position: absolute;
-    top:54px;
+    top: 54px;
     left: 0px;
     width: 48px;
     height: 1px;
     background: #ffb400;
-    transform-origin:bottom right;
-    animation:second 0.3s;
+    transform-origin: bottom right;
+    animation: second 0.3s;
   }
-  @keyframes second{
-    from{
-      transform:scale(0);
+  @keyframes second {
+    from {
+      transform: scale(0);
     }
-    to{
-      transform:scale(1);
-    }
-  }
-  .xLine{
-      position: absolute;
-      bottom: 0;
-      right: -54px;
-      width: 80px;
-      height: 1px;
-      background: #ffb400;
-      transform: rotateZ(-125deg);
-      transform-origin:bottom left;
-      animation:first 0.5s;
-  }
-  @keyframes first{
-    from{
-      transform:rotateZ(-125deg) scale(0);
-    }
-    to{
-      transform:rotateZ(-125deg) scale(1);
+    to {
+      transform: scale(1);
     }
   }
-  .bottomLeftCircle{
+  .xLine {
+    position: absolute;
+    bottom: 0;
+    right: -54px;
+    width: 80px;
+    height: 1px;
+    background: #ffb400;
+    transform: rotateZ(-125deg);
+    transform-origin: bottom left;
+    animation: first 0.5s;
+  }
+  @keyframes first {
+    from {
+      transform: rotateZ(-125deg) scale(0);
+    }
+    to {
+      transform: rotateZ(-125deg) scale(1);
+    }
+  }
+  .bottomLeftCircle {
     position: absolute;
     bottom: -9px;
     left: 83px;
     opacity: 1;
-    animation:firstCircle 1s;
+    animation: firstCircle 1s;
   }
-  @keyframes firstCircle{
-    from{
+  @keyframes firstCircle {
+    from {
       opacity: 0;
     }
-    to{
+    to {
       opacity: 1;
     }
   }
-  .topRightCircle{
+  .topRightCircle {
     position: absolute;
     top: 45px;
     left: -9px;
-    animation:secondCircle 1s;
+    animation: secondCircle 1s;
   }
-  @keyframes secondCircle{
-    from{
+  @keyframes secondCircle {
+    from {
       opacity: 0;
     }
-    to{
+    to {
       opacity: 1;
     }
   }
 }
-

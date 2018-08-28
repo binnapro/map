@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MyModal from "./modal.js";
-import { api, post } from "../utils/request.js";
+import { post } from "../../utils/request";
 const config = [
   {
     visible: true,
@@ -62,17 +62,13 @@ export default class App extends Component {
   };
 
   componentDidMount() {}
-  init = () => {
-    post(api.maplist, {
+  init = async () => {
+    let res = await post("/api/get/map/list/1", {
       page: this.props.step,
       area: this.state.which
-    }).then(e => {
-      let res = e.data;
-      if (res.status === "success") {
-        this.setState({
-          source: res.data
-        });
-      }
+    });
+    this.setState({
+      source: res
     });
   };
   mapClick = ({ which }, e) => {

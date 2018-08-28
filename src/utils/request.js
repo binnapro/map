@@ -4,12 +4,12 @@ import config from "./config";
 import { message } from "antd";
 const baseURL = config.get("host");
 
-export function postSimple(url, body) {
+export function post(url, body) {
   return new Promise(function(resolve, reject) {
     axios
       .create({
         baseURL: baseURL,
-        timeout: 65000,
+        timeout: 500,
         headers: {
           "Content-Type": "application/json",
           "Access-Token": Cookie.get("token")
