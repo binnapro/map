@@ -1,0 +1,189 @@
+.map-bk{
+  background: #f8f8f8;
+}
+
+.default{
+  transition: .3s;
+  transform: scale(1);
+  z-index:0;
+}
+.select{
+  transform: scale(1.01);
+  z-index: 99;
+}
+.noselect{
+  transform: scale(1);
+  opacity:0.3;
+  z-index:1;
+}
+// tabs 
+.myTabs {
+  .ant-tabs-bar{
+    margin-bottom: 13px;
+  }
+  .ant-tabs-nav .ant-tabs-tab-active{
+    color:#75ca86;
+    font-size: 17px;
+  }
+  .ant-tabs-nav .ant-tabs-tab:hover{
+    color:#75ca86;
+  }
+  .ant-tabs-nav .ant-tabs-tab{
+    font-size: 17px;
+  }
+  .ant-tabs-ink-bar{
+    background: #75ca86;
+    height: 3px;
+    border-radius: 1.5px;
+  }
+}
+// kuang
+.schoolMapModal{
+  opacity:1;
+  animation:schoolMapModalMove 0.5s;
+}
+@keyframes schoolMapModalMove{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+// xian
+.lineRight{
+  .hLine{
+    position: absolute;
+    top:54px;
+    left: 45px;
+    width: 48px;
+    height: 1px;
+    background: #ffb400;
+    animation:second1 0.3s;
+  }
+  @keyframes second1{
+    from{
+      width: 0px;
+    }
+    to{
+      width: 48px;
+    }
+  }
+  .xLine{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 1px;
+      background: #ffb400;
+      transform: rotateZ(-55deg);
+      transform-origin:bottom left;
+      animation:first1 0.5s;
+  }
+  @keyframes first1{
+    from{
+      transform:rotateZ(-55deg) scale(0);
+    }
+    to{
+      transform:rotateZ(-55deg) scale(1);
+    }
+  }
+  .bottomLeftCircle{
+    position: absolute;
+    bottom: -9px;
+    left: -8px;
+    opacity: 1;
+    animation:firstCircle1 1s;
+  }
+  @keyframes firstCircle1{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  .topRightCircle{
+    position: absolute;
+    top: 45px;
+    right: 15px;
+    animation:secondCircle1 1s;
+  }
+  @keyframes secondCircle1{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+}
+.lineLeft{
+  .hLine{
+    position: absolute;
+    top:54px;
+    left: 0px;
+    width: 48px;
+    height: 1px;
+    background: #ffb400;
+    transform-origin:bottom right;
+    animation:second 0.3s;
+  }
+  @keyframes second{
+    from{
+      transform:scale(0);
+    }
+    to{
+      transform:scale(1);
+    }
+  }
+  .xLine{
+      position: absolute;
+      bottom: 0;
+      right: -54px;
+      width: 80px;
+      height: 1px;
+      background: #ffb400;
+      transform: rotateZ(-125deg);
+      transform-origin:bottom left;
+      animation:first 0.5s;
+  }
+  @keyframes first{
+    from{
+      transform:rotateZ(-125deg) scale(0);
+    }
+    to{
+      transform:rotateZ(-125deg) scale(1);
+    }
+  }
+  .bottomLeftCircle{
+    position: absolute;
+    bottom: -9px;
+    left: 83px;
+    opacity: 1;
+    animation:firstCircle 1s;
+  }
+  @keyframes firstCircle{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  .topRightCircle{
+    position: absolute;
+    top: 45px;
+    left: -9px;
+    animation:secondCircle 1s;
+  }
+  @keyframes secondCircle{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+}
+

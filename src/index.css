@@ -1,0 +1,4 @@
+/* global就是全局属性的意思 */
+html, body, #root {
+  height: 100%;
+}

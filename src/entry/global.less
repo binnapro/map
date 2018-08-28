@@ -1,0 +1,128 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+
+.flexWrap{
+  flex-wrap: wrap;
+}
+.flex1{
+  flex:1;
+}
+.flex2{
+  flex:2;
+}
+.flex3{
+  flex:3;
+}
+.flex4{
+  flex:4;
+}
+// -------------- 定位 -----------------
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+.fill{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// ------------- 鼠标手样式 ------------------
+.pointer{
+  cursor:pointer;
+}
+.no{
+  cursor: not-allowed;
+}
+
+// -------------- 单行多上省略 ---------------
+//最大宽度设置需要自己来定，默认为60px,或者设置成width
+.row1Ellipsis{
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.row2ellipsis{// 多行省略号
+  line-height: 22px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.row3ellipsis{
+  line-height: 22px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.row4ellipsis{
+  line-height: 22px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+
+//-------------- 阴影 -------------------
+.shadow{
+  box-shadow: 0 0 7px rgba(74,74,74,0.05)
+}
+
+//-------------- 圆 -------------------
+.circle{
+  height:8px;
+  width:8px;
+  background:#75ca86;
+  border-radius: 50%;
+}
+
+// --------------------- 新布局样式 -------------------------------
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+.mainStart{
+  justify-content: flex-start;
+}
+
+.mainEnd{
+  justify-content: flex-end;
+}
+
+.mainCenter{
+  justify-content: center;
+}
+
+.mainBetween{
+  justify-content: space-between;
+}
+
+.subStart{
+  align-items: flex-start;
+}
+.subEnd{
+  align-items: flex-end;
+}
+.subCenter{
+  align-items: center;
+}
+.flexWrap{
+  flex-wrap: wrap;
+}
